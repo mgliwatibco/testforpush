@@ -1,0 +1,67 @@
+Actual URL:
+http://localhost:8079/bw/v1/stats/transitionInstances
+============
+
+GET /agents/processinfo: Get information about the system process of BusinessWorks Agent
+http://localhost:8079/bw/v1/agents/processinfo
+
+GET /agents/info: Get information about the BusinessWorks Agent
+http://localhost:8079/bw/v1/agents/info
+
+GET /machines/{name} Find a machine by name
+http://localhost:8079/bw/v1/machines/pwankhed-p52?status=true
+
+GET /installations/{name} Find a installation by name
+http://localhost:8079/bw/v1/installations/651_LHF?machineName=pwankhed-p52
+
+GET /stats/transitionInstances/count Returns the total number of transition instances
+http://localhost:8079/bw/v1/stats/transitionInstances/count
+
+GET /stats/transitionInstances Returns transition instances
+http://localhost:8079/bw/v1/stats/transitionInstances
+
+GET /domains/{domain}/appspaces/{appspace}/appnodes/{name}/config/content Returns the config properties of AppNode
+http://localhost:8079/bw/v1/domains/SynTouch/appspaces/service/appnodes/LP-AN1/config/content
+
+GET /domains/{domain}/appspaces/{appspace}/appnodes/{name} Returns the details of an AppNode
+http://localhost:8079/bw/v1/domains/SynTouch/appspaces/service/appnodes/LP-AN1?status=false
+
+GET /domains/{domain}/appspaces/{appspace}/appnodes/{name}/info Returns the runtime information of an AppNode
+http://localhost:8079/bw/v1/domains/SynTouch/appspaces/service/appnodes/LP-AN1/info
+
+GET /domains/{domain}/archives/{name} Archive details
+http://localhost:8079/bw/v1/domains/SynTouch/archives/abc
+
+GET /domains/{domain}/archives/{archive}/{profile} Returns a profile file
+http://localhost:8079/bw/v1/domains/SynTouch/archives/ab/ab
+
+GET /domains/{domain}/appspaces/{appspace}/appnodes/{appnode}/engine   Get details of BW Engine deployed on the appnode
+http://localhost:8079/bw/v1/domains/SynTouch/appspaces/service/appnodes/LP-AN1/engine
+
+GET /browse/agents Get information about BW Agents matching a given pattern
+http://localhost:8079/bw/v1/browse/agents
+
+GET /browse/installations Get information about installations.
+http://localhost:8079/bw/v1/browse/installations
+
+GET /browse/appspaces List AppSpaces matching a filter
+http://localhost:8079/bw/v1/browse/appspaces?domain=SynTouch&full=true&status=false
+http://localhost:8079/bw/v1/browse/appspaces?domain=SynTouch&full=false&status=false
+	
+GET /browse/domains Returns Domains
+http://localhost:8079/bw/v1/browse/domains?full=false&status=true
+
+GET /browse/machines Get information about machines matching a given pattern.
+http://localhost:8079/bw/v1/browse/machines?status=false
+
+GET /browse/appnodes List AppNodes matching a filter
+http://localhost:8079/bw/v1/browse/appnodes?domain=SynTouch&status=false
+
+GET /domains/{domain}/appspaces/{name} AppSpace details
+http://localhost:8079/bw/v1/domains/SynTouch/appspaces/service?status=false&full=false
+
+GET /domains/{domain}/appspaces/{name}/config/content Returns the configuration of an AppSpace
+http://localhost:8079/bw/v1/domains/SynTouch/appspaces/service/config/content
+
+GET Browse all the avaiable domain
+http://localhost:8079/bw/v1/browse/domains?full=false&status=true

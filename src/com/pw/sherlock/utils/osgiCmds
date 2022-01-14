@@ -1,0 +1,446 @@
+bw:dsr
+Diagnoses Shared Resource issues
+>> No argument required. Did not work via postman, OSGi console worked
+==================
+
+bw:geticon
+
+bw:lais
+>> lais - Retrieves statistics of activities that have been executed in the process(es) for the application
+admin@AN1> lais JmsReciver.module
+The process instrumentation statistics collection is not started for the application [JmsReciver.module].
+================
+
+bw:lapi
+>> admin@AN1> lapi JmsReceiver
+Retrieves information about process instances of the application
+================
+
+bw:lapis
+>> lapis - Prints summary of active process instance
+lapis bw0a10j5t (Works only when process instance is availalable)
+===============
+
+bw:las
+>> las - List all instantiated Activities
+No argument required
+===============
+
+bw:lat
+>> lat - List all registered Activity types
+No argument required
+===============
+
+
+bw:lbwes
+>> lbwes - Lists all subscribers that are currently listening to BW statistics events.
+No argument required
+===============
+
+
+bw:le
+>> le - Print information about BW Engines
+No argument required
+===============
+
+
+bw:lec
+>> lec - Print information about BW Engine Configurations
+No argument required
+===============
+
+
+bw:lendpoints
+>> lendpoints - List endpoints exposed by the BW Engine
+options:
+      -a, --app   Name of the application [optional]
+      -t, --type   Endpoint Type [optional]
+
+bw:les
+>> les - List all instantiated EventSources
+No argument required
+===============
+
+bw:lmetrics
+>> lmetrics - Print Job metrics for application(s) running on the appnode
+lmetrics -a JmsReceiver -v 1.0
+===============
+
+bw:lpis
+>> lpis - Print statistics of process(es) that have been executed for the application
+   scope: bw
+   options:
+      -p, --process   Name of the process [optional]
+      -v, --version   Version of the application [optional]
+   parameters:
+      String   Name of the application
+===============
+
+bw:lr
+>> lr - List resource details
+lr - List resource details
+   scope: bw
+   parameters:
+      long   Shared Resource ID
+lr 1
+
+===============
+
+
+bw:lrhandlers
+>> lrhandlers - List all resource handlers
+No arguments required
+===============
+
+
+bw:lrproxies
+>> lrproxies - List all resource proxies
+   scope: bw
+No arguments required
+===============
+
+bw:startesc
+>> startesc - Start execution statistics collection of given entity (process/activity) for application(s)
+   scope: bw
+   options:
+      -a, --app   Name of the application [optional]
+      -v, --version   Version of the application [optional]
+   parameters:
+      String   Entity Name
+startesc -a JmsReceiver -v 1.0 process
+startesc -a JmsReceiver -v 1.0 activity
+===============
+
+bw:startpsc
+>> startpsc - Start collection of process statistics for application(s)
+   scope: bw
+   options:
+      -a, --app   Name of the application [optional]
+      -v, --version   Version of the application [optional]
+startpsc -a JmsReceiver -v 1.0
+===============
+
+bw:stopesc
+>> stopesc - Stop execution statistics collection of given entity (process/activity) for application(s)
+   scope: bw
+   options:
+      -a, --app   Name of the application. [optional]
+      -v, --version   Version of the application. [optional]
+   parameters:
+      String   Entity Name
+
+stopesc -a JmsReceiver -v 1.0 process
+stopesc -a JmsReceiver -v 1.0 activity
+==================
+
+
+bw:stoppsc
+>> stoppsc - Stop collection of process statistics for application(s)
+   scope: bw
+   options:
+      -a, --app   Name of the application [optional]
+      -v, --version   Version of the application [optional]
+
+stoppsc -a JmsReceiver -v 1.0
+===================
+
+bwadmin:install
+bwadmin:restart
+bwadmin:shutdown
+bwadmin:uninstall
+
+==========
+bwadmin:version
+>> Display BW version
+===============
+
+equinox:b
+equinox:bundle
+equinox:bundles
+equinox:classSpaces
+equinox:close
+equinox:diag
+equinox:disableBundle
+equinox:disabledBundles
+equinox:disconnect
+equinox:enableBundle
+equinox:exec
+equinox:exit
+equinox:fork
+
+==========
+equinox:gc
+>> gc - perform a garbage collection
+gc
+No arugment required
+=============
+
+equinox:getPackages
+equinox:getprop
+>> getprop - displays the system properties with the given name, or all of them                                                                                                                                          
+scope: equinox                                                                                                                                                                                                     
+parameters:                                                                                                                                                                                                           
+String[]   name of system property to dispaly                        
+
+================
+
+equinox:h
+equinox:headers
+equinox:help
+equinox:i
+equinox:init
+equinox:install
+equinox:man
+equinox:p
+equinox:packages
+equinox:pr
+equinox:profilelog
+equinox:props
+equinox:r
+equinox:refresh
+equinox:requiredBundles
+equinox:s
+equinox:se
+equinox:services
+equinox:setbsl
+equinox:setfwsl
+equinox:setibsl
+equinox:setp
+equinox:setprop
+equinox:shutdown
+equinox:sl
+
+============
+equinox:ss
+>> ss - display installed bundles (short status)
+===========
+
+equinox:ssh
+equinox:sta
+equinox:start
+equinox:status
+equinox:sto
+equinox:stop
+equinox:t
+equinox:telnet
+
+===============
+equinox:threads
+>> admin@AN1> help threads
+threads - display threads and thread groups
+===========
+
+equinox:un
+equinox:uninstall
+equinox:up
+equinox:update
+
+felix:bundlelevel
+
+felix:cd
+>> Current directory
+
+felix:frameworklevel
+felix:headers
+felix:help
+felix:inspect
+felix:install
+felix:lb		
+felix:log
+felix:ls
+felix:refresh
+felix:resolve
+felix:start
+felix:stop
+felix:uninstall
+felix:update
+felix:which
+
+=========
+frwk:appnodeprocessinfo
+>> appnodeprocessinfo - Print information about AppNode system process
+=========
+
+frwk:dc
+
+=================
+frwk:getcompdetail
+>> getcompdetail - Get the detail of specific component of a BW Application                                                                                                                         
+scope: frwk                                                                                                                                                                                   
+options: -v, --version   Version of the Application. If omitted all versions are affected. [optional]                                                                                               parameters:                                                                                                                                                                                      String   Name of the Application                                                                                                                                                              
+String   Name of the Component
+=====================
+                                                                
+frwk:getcomps
+>> getcomps - Get the list of components of a BW Application                                                                                                                                       
+ scope: frwk
+  options: -v, --version   Version of the Application. If omitted all versions are affected. [optional]                                                                                               
+  parameters: String   Name of the Application
+==================
+
+frwk:la
+>> la - Print information about all applications
+
+==========
+frwk:lap
+>> lap - Print all application properties
+
+frwk:lb
+frwk:lcfg
+frwk:ll
+
+=============
+frwk:lloggers
+>> lloggers - Print all loggers currently configured on the appnode
+===========
+
+frwk:lp
+>> lp - Print information about all known BW Processes
+==========
+
+frwk:pauseapp
+>> >> pauseapp - Stop the process starters and their bindings and pause all jobs of a BW Application
+scope: frwk
+options:
+-v, --version   Version of the Application. If omitted all versions are affected. [optional]
+parameters:
+String   Name of the Application                                                            
+========
+
+frwk:resumeapp
+>> resumeapp - Start the process starters and their bindings and resume all jobs of a BW Application
+scope: frwk
+options:
+-v, --version   Version of the Application. If omitted all versions are affected. [optional] 
+Parameters: String   Name of the Application                                                            
+===============
+
+frwk:resumepi
+>> resumepi - Resumes the process instances for specified process instance ids.
+ scope: frwk 
+ parameters:
+  String   BW generated process instance id or list of id separated by comma. For eg. resumepi p_id1,p_id2
+
+==============
+
+frwk:setloglevel
+>> setloglevel - Set log level of given logger
+scope: frwk Options: -l, --level   Log level to set. The valid values are {Trace, Debug, Info, Error, Warn}. If not provided, log level is set to parent log level. [optional]                                                       
+parameters: String   Name of the Logger
+
+admin@AN1> setloglevel -l TRACE com.tibco.bx
+Log level of Logger [com.tibco.bx] is set to [TRACE]
+============
+
+frwk:startapp - Wont implement
+frwk:startcomp - Wont implement
+frwk:startcomps - Wont implement
+frwk:startps - Wont implement
+frwk:stopapp - Wont implement
+frwk:stopcomp - Wont implement
+frwk:stopps - Wont implement
+frwk:suspendpi - Wont implement
+frwk:td
+
+gogo:cat
+gogo:each
+gogo:echo
+gogo:format
+gogo:getopt
+gogo:gosh
+gogo:grep
+gogo:not
+gogo:set
+gogo:sh
+gogo:source
+gogo:tac
+gogo:telnetd
+gogo:type
+gogo:until
+obr:deploy
+obr:info
+obr:javadoc
+obr:list
+obr:repos
+obr:source
+scr:config
+scr:disable
+scr:enable
+scr:info
+scr:list
+wsdl:clean
+=========
+wsdl:collisions
+>> admin@AN1> help collisions
+
+collisions - lists collisions across all projects
+   scope: wsdl
+
+collisions - lists collisions for given bundle id
+   scope: wsdl
+   parameters:
+      String
+=========
+
+
+wsdl:elem
+wsdl:elemLoc
+wsdl:errors
+>> errors - prints error messages for specified bundle id
+   scope: wsdl
+   parameters:
+      long
+
+errors - prints error messages for all bundles
+   scope: wsdl
+=========
+
+wsdl:ids
+
+
+wsdl:imports
+>> >> imports - shows basic info such as locations, targetNamespaces, and imports
+   scope: wsdl
+
+imports - shows info related to imports
+   scope: wsdl
+   parameters:
+      long
+===========
+
+
+wsdl:load
+wsdl:locations
+wsdl:message
+wsdl:ns
+wsdl:nsLoc
+wsdl:port
+wsdl:type
+wsdl:typeLoc
+wsdl:types
+wsdl:wires
+xsd:att
+xsd:atts
+xsd:clean
+xsd:collisions
+xsd:elem
+xsd:elemLoc
+xsd:elemNs
+xsd:elemNsEmpty
+xsd:elemNsNull
+xsd:elemsNullLocEmptyNs
+xsd:elemsNullLocNullNs
+xsd:errors
+xsd:errorsLoc
+xsd:errorsNs
+xsd:ids
+xsd:imports
+xsd:load
+xsd:locations
+xsd:mg
+xsd:ns
+xsd:nsLoc
+xsd:type
+xsd:typeLoc
+xsd:types
+xsd:wires

@@ -1,0 +1,21 @@
+			
+##Important code to convert and slit the code
+//System.out.println(key + " : " + value);
+			//String[] r = key.split("(?=\\p{Lu})");
+			//String[] r = key.split("(?=\\p{Upper})");
+			//System.out.println(Arrays.toString(r) + " : " + value);
+
+================
+
+System.out.println(StringUtils.join(StringUtils.splitByCharacterTypeCamelCase(key),' '));
+
+To pretty print JSON:
+
+		//GSON Way. I would avoid this to reduce the dependency on third party libs. Need to add lib, Jar already downloaded
+		//===========
+		//		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		//		JsonParser jp = new JsonParser();
+		//		JsonElement je = jp.parse(AgentCalls.agentInfo);
+		//		String prettyJsonString = gson.toJson(je);
+		//		System.out.println(prettyJsonString);
+		//		agentInfoLbl.setText(prettyJsonString);
